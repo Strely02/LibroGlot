@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 // Pages
 import Home from './pages/Home';
-import Reader from './pages/Reader';
+import ReaderAdvanced from './pages/ReaderAdvanced';
 import Upload from './pages/Upload';
 import Library from './pages/Library';
 
@@ -41,7 +41,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/upload" element={<Upload />} />
               <Route path="/library" element={<Library />} />
-              <Route path="/reader/:bookId" element={<Reader />} />
+              <Route path="/reader/:bookId" element={<ReaderAdvanced />} />
             </Routes>
           </ContentWrapper>
           <Footer />

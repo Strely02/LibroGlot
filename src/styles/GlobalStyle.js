@@ -49,6 +49,55 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+  
+  /* Estilos para el modo oscuro */
+  .dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  /* Estilos para el modo sepia */
+  .sepia-mode {
+    background-color: #f4f1ea;
+    color: #5c4b37;
+  }
+  
+  /* Scrollbar personalizada */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animaciones globales */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .slide-in {
+    animation: slideIn 0.3s ease-in;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
 `;
 
 export default GlobalStyle;
