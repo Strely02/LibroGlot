@@ -25,7 +25,7 @@ const useTranslationAPI = () => {
     const textContent = tempDiv.textContent || tempDiv.innerText || '';
     
     // Dividir en párrafos para traducir por chunks
-    return textContent.split('\\n').filter(paragraph => paragraph.trim().length > 0);
+    return textContent.split('\n').filter(paragraph => paragraph.trim().length > 0);
   }, []);
 
   /**
@@ -137,7 +137,7 @@ const useTranslationAPI = () => {
         'Two': 'Dos',
         'Three': 'Tres',
         'Lest anyone should suppose': 'Para que nadie piense',
-        'that I am a cuckoo\\'s child': 'que soy hija bastarda',
+        'that I am a cuckoo\'s child': 'que soy hija bastarda',
         'got on the wrong side of the blanket': 'engendrada en el lado incorrecto de las sábanas',
         'by lusty peasant stock': 'por lujuria rústica',
         'and sold into indenture': 'y vendida en servidumbre',
@@ -160,13 +160,13 @@ const useTranslationAPI = () => {
         'I was marked': 'Estaba marcada',
         'It is not, of course, that I lacked beauty': 'No es, por supuesto, que me faltara belleza',
         'even as a babe': 'incluso siendo bebé',
-        'I am D\\'Angeline, after all': 'Soy D\\'Angeline, después de todo'
+        'I am D\'Angeline, after all': 'Soy D\'Angeline, después de todo'
       },
       'es-en': {
         'Capítulo': 'Chapter',
         'Uno': 'One',
         'Para que nadie piense': 'Lest anyone should suppose',
-        'que soy hija bastarda': 'that I am a cuckoo\\'s child'
+        'que soy hija bastarda': 'that I am a cuckoo\'s child'
       }
     };
 
@@ -177,7 +177,7 @@ const useTranslationAPI = () => {
 
     // Aplicar traducciones del diccionario
     Object.entries(dict).forEach(([original, translation]) => {
-      const regex = new RegExp(original.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&'), 'gi');
+      const regex = new RegExp(original.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
       translatedText = translatedText.replace(regex, translation);
     });
 
